@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A51A5F9A201EDB9400803B61 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51A5F99201EDB9400803B61 /* Alert.swift */; };
 		A5AF91B5201D00FB00BC68D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AF91B4201D00FB00BC68D5 /* AppDelegate.swift */; };
 		A5AF91B7201D00FB00BC68D5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AF91B6201D00FB00BC68D5 /* SearchViewController.swift */; };
 		A5AF91BA201D00FB00BC68D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AF91B8201D00FB00BC68D5 /* Main.storyboard */; };
@@ -15,10 +16,11 @@
 		A5AF91C7201D185500BC68D5 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AF91C6201D185500BC68D5 /* SearchResult.swift */; };
 		A5AF91C9201D815900BC68D5 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5AF91C8201D815900BC68D5 /* SearchResultCell.xib */; };
 		A5AF91CB201D8E7300BC68D5 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AF91CA201D8E7300BC68D5 /* SearchResultCell.swift */; };
-		A5AF91CD201E8B4B00BC68D5 /* NothingFroundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5AF91CC201E8B4B00BC68D5 /* NothingFroundCell.xib */; };
+		A5AF91CD201E8B4B00BC68D5 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5AF91CC201E8B4B00BC68D5 /* NothingFoundCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A51A5F99201EDB9400803B61 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		A5AF91B1201D00FB00BC68D5 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5AF91B4201D00FB00BC68D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5AF91B6201D00FB00BC68D5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -29,7 +31,7 @@
 		A5AF91C6201D185500BC68D5 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		A5AF91C8201D815900BC68D5 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		A5AF91CA201D8E7300BC68D5 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
-		A5AF91CC201E8B4B00BC68D5 /* NothingFroundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFroundCell.xib; sourceTree = "<group>"; };
+		A5AF91CC201E8B4B00BC68D5 /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,8 @@
 				A5AF91C6201D185500BC68D5 /* SearchResult.swift */,
 				A5AF91C8201D815900BC68D5 /* SearchResultCell.xib */,
 				A5AF91CA201D8E7300BC68D5 /* SearchResultCell.swift */,
-				A5AF91CC201E8B4B00BC68D5 /* NothingFroundCell.xib */,
+				A5AF91CC201E8B4B00BC68D5 /* NothingFoundCell.xib */,
+				A51A5F99201EDB9400803B61 /* Alert.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -139,7 +142,7 @@
 				A5AF91BC201D00FB00BC68D5 /* Assets.xcassets in Resources */,
 				A5AF91C9201D815900BC68D5 /* SearchResultCell.xib in Resources */,
 				A5AF91BA201D00FB00BC68D5 /* Main.storyboard in Resources */,
-				A5AF91CD201E8B4B00BC68D5 /* NothingFroundCell.xib in Resources */,
+				A5AF91CD201E8B4B00BC68D5 /* NothingFoundCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +156,7 @@
 				A5AF91B7201D00FB00BC68D5 /* SearchViewController.swift in Sources */,
 				A5AF91C7201D185500BC68D5 /* SearchResult.swift in Sources */,
 				A5AF91CB201D8E7300BC68D5 /* SearchResultCell.swift in Sources */,
+				A51A5F9A201EDB9400803B61 /* Alert.swift in Sources */,
 				A5AF91B5201D00FB00BC68D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

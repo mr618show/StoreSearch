@@ -25,20 +25,18 @@
                             <constraint firstAttribute="height" constant="60" id="gbQ-tz-3bH"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBA-P2-JjD">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBA-P2-JjD">
                         <rect key="frame" x="90" y="15" width="222" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="222" id="O6w-7X-1sK"/>
-                            <constraint firstAttribute="height" constant="22" id="sFB-f8-YKO"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPR-UR-z7e">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPR-UR-z7e">
                         <rect key="frame" x="90" y="44" width="222" height="18"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="18" id="Ah5-Qp-692"/>
                             <constraint firstAttribute="width" constant="222" id="MpG-84-6R6"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -48,11 +46,14 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="QTO-ya-iO6" firstAttribute="leading" secondItem="UZc-KL-SAA" secondAttribute="leading" constant="15" id="99a-Hx-chR"/>
+                    <constraint firstAttribute="trailing" secondItem="sPR-UR-z7e" secondAttribute="trailing" constant="8" id="9vv-dL-sMK"/>
+                    <constraint firstItem="sPR-UR-z7e" firstAttribute="top" secondItem="bBA-P2-JjD" secondAttribute="bottom" constant="7" id="IMm-wH-x6l"/>
                     <constraint firstItem="bBA-P2-JjD" firstAttribute="leading" secondItem="UZc-KL-SAA" secondAttribute="leading" constant="90" id="Ix1-Ow-R5g"/>
                     <constraint firstItem="sPR-UR-z7e" firstAttribute="leading" secondItem="UZc-KL-SAA" secondAttribute="leading" constant="90" id="Mjg-6M-rlm"/>
                     <constraint firstItem="QTO-ya-iO6" firstAttribute="top" secondItem="UZc-KL-SAA" secondAttribute="top" constant="10" id="O0A-vF-61N"/>
                     <constraint firstItem="bBA-P2-JjD" firstAttribute="top" secondItem="UZc-KL-SAA" secondAttribute="top" constant="15" id="faV-8U-lwr"/>
                     <constraint firstItem="sPR-UR-z7e" firstAttribute="top" secondItem="UZc-KL-SAA" secondAttribute="top" constant="44" id="uWa-fd-QNH"/>
+                    <constraint firstAttribute="trailing" secondItem="bBA-P2-JjD" secondAttribute="trailing" constant="8" id="vj7-4G-L2f"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
