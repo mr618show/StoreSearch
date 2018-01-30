@@ -15,6 +15,7 @@ class SearchViewController: UIViewController {
         static let loadingCell = "LoadingCell"
     }
 
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     var searchResults: [SearchResult] = []
@@ -24,7 +25,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.becomeFirstResponder()
-        tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0)
+        tableView.contentInset = UIEdgeInsetsMake(108, 0, 0, 0)
         var cellNib = UINib(nibName: "SearchResultCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.searchResultCell)
         cellNib = UINib(nibName: "NothingFoundCell", bundle: nil)
@@ -40,6 +41,9 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func segmentChanged(_ sender: UISegmentedControl) {
+         performSearch()
+    }
     func iTunesURL(searchText: String) -> URL {
         let escapedSearchText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         let urlString = String(format:
@@ -168,9 +172,10 @@ class SearchViewController: UIViewController {
 }
 
 extension SearchViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func  performSearch(){
         if !searchBar.text!.isEmpty {
             searchBar.resignFirstResponder()
+            self.dataTask?.cancel()
             isLoading = true
             tableView.reloadData()
             hasSearched = true
@@ -181,31 +186,36 @@ extension SearchViewController: UISearchBarDelegate {
                 if let error = error as NSError?, error.code == -999 {
                     print ("Failure! \(error)")
                 } else if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+                    print ("Success! \(data!)")
                     if let data = data, let jsonDictionary = self.parse(json: data) {
                         self.searchResults = self.parse(dictionary: jsonDictionary)
                         self.searchResults.sort(by: <)
+                        //print(self.searchResults)
                         DispatchQueue.main.async {
-                            self.dataTask?.cancel()
-                            self.hasSearched = false
                             self.isLoading = false
                             self.tableView.reloadData()
-                            self.showNeworkError()
                         }
                         return
                     }
-                    
                 } else {
                     print ("Failure! \(response!)")
                 }
-                })
-            
+                DispatchQueue.main.async {
+                    self.hasSearched = false
+                    self.isLoading = false
+                    self.tableView.reloadData()
+                    self.showNetworkError()
+                }} )
             dataTask?.resume()
- 
         }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        performSearch()
     }
 
 
-    func showNeworkError(){
+    func showNetworkError(){
         Alert.showBasic(title: "Oops...", message: "There was an error reading from the iTunes Store. Please try again.", vc: self)
     }
     func position(for bar: UIBarPositioning) -> UIBarPosition {
