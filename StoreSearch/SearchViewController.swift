@@ -18,6 +18,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var searchResults: [SearchResult] = []
     var hasSearched = false
+    var dataTask: URLSessionDataTask?
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.becomeFirstResponder()
@@ -172,14 +173,15 @@ extension SearchViewController: UISearchBarDelegate {
             searchResults = []
             let url = iTunesURL(searchText: searchBar.text!)
             let session = URLSession.shared
-            let dataTask = session.dataTask(with: url, completionHandler: { (data, response, error) in
-                if let error = error {
+            dataTask = session.dataTask(with: url, completionHandler: { (data, response, error) in
+                if let error = error as NSError?, error.code == -999 {
                     print ("Failure! \(error)")
                 } else if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
                     if let data = data, let jsonDictionary = self.parse(json: data) {
                         self.searchResults = self.parse(dictionary: jsonDictionary)
                         self.searchResults.sort(by: <)
                         DispatchQueue.main.async {
+                            self.dataTask?.cancel()
                             self.hasSearched = false
                             self.tableView.reloadData()
                             self.showNeworkError()
@@ -192,7 +194,7 @@ extension SearchViewController: UISearchBarDelegate {
                 }
                 })
             
-            dataTask.resume()
+            dataTask?.resume()
  
         }
     }
