@@ -187,6 +187,7 @@ extension SearchViewController: UISearchBarDelegate {
                         DispatchQueue.main.async {
                             self.dataTask?.cancel()
                             self.hasSearched = false
+                            self.isLoading = false
                             self.tableView.reloadData()
                             self.showNeworkError()
                         }
