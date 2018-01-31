@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A50EEB77201FF761005E5139 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50EEB76201FF761005E5139 /* LoadingCell.xib */; };
+		A50EEB79202147D3005E5139 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50EEB78202147D3005E5139 /* UIImageView+DownloadImage.swift */; };
 		A51A5F9A201EDB9400803B61 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51A5F99201EDB9400803B61 /* Alert.swift */; };
 		A5AF91B5201D00FB00BC68D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AF91B4201D00FB00BC68D5 /* AppDelegate.swift */; };
 		A5AF91B7201D00FB00BC68D5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AF91B6201D00FB00BC68D5 /* SearchViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		A50EEB76201FF761005E5139 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		A50EEB78202147D3005E5139 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		A51A5F99201EDB9400803B61 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		A5AF91B1201D00FB00BC68D5 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5AF91B4201D00FB00BC68D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				A5AF91CC201E8B4B00BC68D5 /* NothingFoundCell.xib */,
 				A51A5F99201EDB9400803B61 /* Alert.swift */,
 				A50EEB76201FF761005E5139 /* LoadingCell.xib */,
+				A50EEB78202147D3005E5139 /* UIImageView+DownloadImage.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			files = (
 				A5AF91B7201D00FB00BC68D5 /* SearchViewController.swift in Sources */,
 				A5AF91C7201D185500BC68D5 /* SearchResult.swift in Sources */,
+				A50EEB79202147D3005E5139 /* UIImageView+DownloadImage.swift in Sources */,
 				A5AF91CB201D8E7300BC68D5 /* SearchResultCell.swift in Sources */,
 				A51A5F9A201EDB9400803B61 /* Alert.swift in Sources */,
 				A5AF91B5201D00FB00BC68D5 /* AppDelegate.swift in Sources */,
